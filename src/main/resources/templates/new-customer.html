@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form  href="#" th:action="createCustomer" th:object="${customer}" method="POST">
+
+    <input type="number" th:field="*{id}" th:text="${customer.id}" hidden/>
+  <label>
+      First Name
+      <input type="text" th:field="*{firstName}" th:text="${customer.firstName}"/>
+  </label>
+    <label>
+        Last Name
+        <input type="text" th:field="*{lastName}" th:text="${customer.lastName}"/>
+    </label>
+    <label>
+        Email
+        <input type="email" th:field="*{email}" th:text="${customer.email}"/>
+    </label>
+    <button type="submit">Guardar customer</button>
+    <a href="../customer/list">BACK TO MAIN PAGE</a>
+</form>
+
+</body>
+</html>
